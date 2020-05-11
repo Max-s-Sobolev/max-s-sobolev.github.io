@@ -164,7 +164,8 @@ header{
 						& > .avatar {
 							margin: 0 auto;
 							max-width: 30%;
-							@media (max-width: 650px){max-width: 35%;}
+							@media (max-width: 335px){max-width: 60%;}
+							@media (min-width: 336px) and (max-width: 650px){max-width: 35%;}
 							@media (min-width: 1190px) {
 								max-width: 70%;
 								
@@ -207,10 +208,11 @@ header{
 			
 				flex-direction:column;
 				.col{
-					
+					text-align: center;
 					flex-basis:auto;
 					
 					&:nth-child(1){order:2;
+
 						font-family: 'Edo';
 						font-size: 29px;
 						letter-spacing:0.1em;
@@ -221,8 +223,15 @@ header{
 							flex-direction:column;
 							align-items:center;
 							margin: 20px 0 0 0;
+							div:first-child{
+								@media (max-width: 335px) {
+									padding-left: 22,5px;
+								}
+								
+							}
 							
 							div:last-child{
+								@media (max-width: 335px) {margin-left: 15px;}
 								width: 400px;
 								line-height: 50px;
 								font-size: 30px;
@@ -230,11 +239,7 @@ header{
 								color: white;
 								background: url('../img/header/мазок.png') no-repeat 50% 50%;
 								background-size: 100%;	
-								/*For really small displays*/
-								@media (max-width: 335px) {
-								background-size: 90%;
-								font-size: 28px;
-								}
+								
 							
 								
 							}
@@ -250,8 +255,8 @@ header{
 						margin-top:15px;
 						font-family: 'Lekton';
 						font-size: 30px;
-						div:first-child{padding-right: 5px;}
-						div:last-child{padding-left: 5px;}
+						div:first-child{margin-right: -5px;}
+						div:last-child{margin-left: -5px;}
 					}
 				}
 			}
