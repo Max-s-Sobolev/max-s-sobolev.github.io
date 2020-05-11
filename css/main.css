@@ -248,7 +248,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 1190px) and (max-width: 335px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:first-child {
-    padding-left: 15px;
+    padding-left: 22, 5px;
   }
 }
 @media (max-width: 1190px) {
@@ -264,7 +264,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 1190px) and (max-width: 335px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 @media (max-width: 1190px) {
@@ -277,10 +277,10 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     font-size: 30px;
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(3) div:first-child {
-    padding-right: 5px;
+    margin-right: -5px;
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(3) div:last-child {
-    padding-left: 5px;
+    margin-left: -5px;
   }
 }
 
