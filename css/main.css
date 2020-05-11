@@ -243,7 +243,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 1190px) and (max-width: 720px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:first-child {
-    padding-left: 22px;
+    padding-left: 17px;
   }
 }
 @media (max-width: 1190px) {
@@ -259,7 +259,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 1190px) and (max-width: 720px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 @media (max-width: 1190px) {
