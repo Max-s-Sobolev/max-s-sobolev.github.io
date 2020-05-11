@@ -226,6 +226,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
   }
   header .container-fluid .row:nth-child(2) .col {
     flex-basis: auto;
+    text-align: center;
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(1) {
     order: 2;
