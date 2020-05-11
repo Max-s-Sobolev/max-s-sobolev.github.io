@@ -192,7 +192,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
   border-radius: 50%;
   overflow: hidden;
 }
-@media (max-width: 335px) {
+@media (max-width: 320px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
     max-width: 50%;
   }
