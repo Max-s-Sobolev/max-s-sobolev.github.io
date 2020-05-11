@@ -197,7 +197,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     max-width: 60%;
   }
 }
-@media (max-width: 650px) {
+@media (min-width: 336px) and (max-width: 650px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
     max-width: 35%;
   }
