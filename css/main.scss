@@ -1,5 +1,31 @@
 @import 'null.scss';
-@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+
+/*FONTS*/
+@font-face {
+    font-family: 'Lekton';
+    src: url('Lekton-Regular.eot');
+    src: url('Lekton-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Lekton-Regular.woff2') format('woff2'),
+        url('Lekton-Regular.woff') format('woff'),
+        url('Lekton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Edo';
+    src: url('Edo.eot');
+    src: url('Edo.eot?#iefix') format('embedded-opentype'),
+        url('Edo.woff2') format('woff2'),
+        url('Edo.woff') format('woff'),
+        url('Edo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 
 
 //Спрятать скролл
@@ -204,12 +230,11 @@ header{
 								color: white;
 								background: url('../img/header/мазок.png') no-repeat 50% 50%;
 								background-size: 100%;	
-								/*For really small displays
+								/*For really small displays*/
 								@media (max-width: 335px) {
 								background-size: 90%;
 								font-size: 28px;
 								}
-								*/
 							
 								
 							}

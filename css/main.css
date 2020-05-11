@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Lekton&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -73,6 +72,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+/*FONTS*/
+@font-face {
+  font-family: "Lekton";
+  src: url("Lekton-Regular.eot");
+  src: url("Lekton-Regular.eot?#iefix") format("embedded-opentype"), url("Lekton-Regular.woff2") format("woff2"), url("Lekton-Regular.woff") format("woff"), url("Lekton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Edo";
+  src: url("Edo.eot");
+  src: url("Edo.eot?#iefix") format("embedded-opentype"), url("Edo.woff2") format("woff2"), url("Edo.woff") format("woff"), url("Edo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px;
