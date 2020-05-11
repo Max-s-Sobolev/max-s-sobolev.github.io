@@ -246,7 +246,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     margin: 20px 0 0 0;
   }
 }
-@media (max-width: 1190px) and (max-width: 335px) {
+@media (max-width: 1190px) and (max-width: 320px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:first-child {
     padding-left: 22px;
   }
@@ -262,7 +262,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     background-size: 100%;
   }
 }
-@media (max-width: 1190px) and (max-width: 335px) {
+@media (max-width: 1190px) and (max-width: 320px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
     margin-left: 20px;
   }
