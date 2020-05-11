@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Lekton&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px;
+  /* ширина scrollbar'a */
+  background: transparent;
+  /* опционально */
+}
+
+html {
+  font-family: "Roboto Mono";
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+header .container-fluid {
+  padding: 0;
+}
+@media (max-width: 1190px) {
+  header .container-fluid .row:nth-child(1) {
+    display: none;
+  }
+}
+header .container-fluid .row:nth-child(1) .col {
+  height: 530px;
+  position: relative;
+}
+header .container-fluid .row:nth-child(1) .col:nth-child(1):after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -4px;
+  height: 212px;
+  width: 8px;
+  background: black;
+}
+header .container-fluid .row:nth-child(1) .col:nth-child(2):after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -4px;
+  height: 424px;
+  width: 8px;
+  background: black;
+}
+header .container-fluid .row:nth-child(2) {
+  /* MOBILE VERSION */
+}
+header .container-fluid .row:nth-child(2) .col {
+  text-align: center;
+}
+@media (min-width: 1190px) {
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) {
+    /*PROFESSIONAL PHOTOGRAPHER */
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Edo";
+    font-size: 48px;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title {
+    margin-right: -30px;
+    height: 200px;
+    position: absolute;
+    padding: 40px 50px;
+    background: url("../img/header/rb.png") no-repeat 50% 55%;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:nth-child(1) {
+    text-align: rigth;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:nth-child(2) {
+    text-align: rigth;
+    margin-right: -33px;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) {
+    padding-top: 40px;
+    /* MAXIM KULIKOV */
+    font-size: 64px;
+    font-family: "Lekton";
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) div:nth-child(1) {
+    text-align: left;
+    padding-left: 30px;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) div:nth-child(2) {
+    text-align: left;
+    margin-left: -33px;
+  }
+}
+header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper {
+  position: relative;
+}
+header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
+  margin: 0 auto;
+  max-width: 30%;
+  border: 8px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media (max-width: 650px) {
+  header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
+    max-width: 35%;
+  }
+}
+@media (min-width: 1190px) {
+  header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
+    max-width: 70%;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar .avatar-inner {
+  position: relative;
+  height: 0;
+  border: none;
+}
+header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar .avatar-inner .avatar-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar img {
+  width: 100%;
+}
+@media (max-width: 1190px) {
+  header .container-fluid .row:nth-child(2) {
+    flex-direction: column;
+  }
+  header .container-fluid .row:nth-child(2) .col {
+    flex-basis: auto;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) {
+    order: 2;
+    font-family: "Edo";
+    font-size: 29px;
+    letter-spacing: 0.1em;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
+    width: 400px;
+    line-height: 50px;
+    font-size: 30px;
+    height: 50px;
+    color: white;
+    background: url("../img/header/мазок.png") no-repeat 50% 50%;
+    background-size: 100%;
+    /*For really small displays*/
+  }
+}
+@media (max-width: 1190px) and (max-width: 335px) {
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
+    background-size: 90%;
+    font-size: 28px;
+  }
+}
+@media (max-width: 1190px) {
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: "Lekton";
+    font-size: 30px;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) div:first-child {
+    padding-right: 5px;
+  }
+  header .container-fluid .row:nth-child(2) .col:nth-child(3) div:last-child {
+    padding-left: 5px;
+  }
+}
+
+.WeqH {
+  padding-top: 100%;
+}
