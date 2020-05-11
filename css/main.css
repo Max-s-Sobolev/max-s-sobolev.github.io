@@ -225,8 +225,8 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     flex-direction: column;
   }
   header .container-fluid .row:nth-child(2) .col {
-    flex-basis: auto;
     text-align: center;
+    flex-basis: auto;
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(1) {
     order: 2;
@@ -240,7 +240,11 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     align-items: center;
     margin: 20px 0 0 0;
   }
+  header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:first-child {
+    padding-left: 15px;
+  }
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
+    margin-left: 10px;
     width: 400px;
     line-height: 50px;
     font-size: 30px;
