@@ -194,7 +194,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 335px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
-    max-width: 60%;
+    max-width: 50%;
   }
 }
 @media (min-width: 336px) and (max-width: 650px) {
@@ -264,7 +264,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 1190px) and (max-width: 335px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 }
 @media (max-width: 1190px) {
