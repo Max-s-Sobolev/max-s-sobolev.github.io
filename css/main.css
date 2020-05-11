@@ -194,7 +194,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
 }
 @media (max-width: 335px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 @media (max-width: 650px) {
