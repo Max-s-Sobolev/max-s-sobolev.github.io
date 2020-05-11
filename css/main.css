@@ -192,14 +192,9 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
   border-radius: 50%;
   overflow: hidden;
 }
-@media (max-width: 320px) {
+@media (max-width: 720px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
     max-width: 50%;
-  }
-}
-@media (min-width: 336px) and (max-width: 650px) {
-  header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar {
-    max-width: 35%;
   }
 }
 @media (min-width: 1190px) {
@@ -246,7 +241,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     margin: 20px 0 0 0;
   }
 }
-@media (max-width: 1190px) and (max-width: 320px) {
+@media (max-width: 1190px) and (max-width: 720px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:first-child {
     padding-left: 22px;
   }
@@ -262,7 +257,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     background-size: 100%;
   }
 }
-@media (max-width: 1190px) and (max-width: 320px) {
+@media (max-width: 1190px) and (max-width: 720px) {
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
     margin-left: 20px;
   }
