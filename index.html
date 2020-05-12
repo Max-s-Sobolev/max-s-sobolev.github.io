@@ -5,44 +5,23 @@
 	<title>Main</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-    <script type="text/javascript">
-      (function(){
-        // Выполняем код только на мобильных браузерах (на всякий случай)
-        if (typeof(window.orientation) !== 'undefined')
-        {
-          // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
-          function getDeviceWidth()
-          {
-            var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-            // iOS returns available pixels, Android returns pixels / pixel ratio
-            // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
-            if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-              deviceWidth = deviceWidth / window.devicePixelRatio;
 
-            return deviceWidth;
-          }
 
-          var deviceWidth = getDeviceWidth();
-          var maxWidth = 900;
-          
-          if (deviceWidth < maxWidth)
-          {
-            // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины 
-            // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в 
-            // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
-            if (window.orientation == 0 || window.orientation == 180)
-              document.write('<meta name="viewport" content="width=device-width">');
-            else
-              document.write('<meta name="viewport" content="width=device-height">');
-          }
-          else
-            document.write('<meta name="viewport" content="width=' + maxWidth + '">');
-        }
-      })();
-    </script>
+<div class="burger"></div>
+<menu>
+	<div class="menu">
+		<ul>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Приобрести фото</a></li>
+			<li><a href="#">Backstage</a></li>
+			<li><a href="#">Полное портфолио</a></li>
+		</ul>
+	</div>
+	
+</menu>
+
 <header>
 	<div class="container-fluid">
 		<div class="row no-gutters">
@@ -59,6 +38,7 @@
 				
 			</div>
 			<div class="col">
+				<!-- Avatar -->
 				<div class="avatar-wrapper">
 					<div class="avatar">
 						<div class="avatar-inner WeqH">
@@ -68,6 +48,7 @@
 						</div>
 					</div>
 				</div>
+				<!--/Avatar -->
 			</div>
 			<div class="col">
 				<div>KULIKOV</div>
@@ -84,7 +65,7 @@
 
 
 
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
