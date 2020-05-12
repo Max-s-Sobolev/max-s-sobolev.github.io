@@ -127,8 +127,8 @@ body {
 .burger {
   cursor: pointer;
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 40px;
+  right: 40px;
   z-index: 11;
   width: 30px;
   height: 3px;
@@ -154,8 +154,8 @@ body {
 .closer {
   cursor: pointer;
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 40px;
+  right: 40px;
   z-index: 11;
 }
 .closer:before {
