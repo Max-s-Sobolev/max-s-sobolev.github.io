@@ -157,7 +157,7 @@ body {
   background: black;
 }
 
-.closer {
+.closer, .close-desktop-menu {
   cursor: pointer;
   position: absolute;
   top: 40px;
@@ -165,12 +165,12 @@ body {
   z-index: 11;
 }
 @media (max-width: 480px) {
-  .closer {
+  .closer, .close-desktop-menu {
     top: 40px;
     right: 20px;
   }
 }
-.closer:before {
+.closer:before, .close-desktop-menu:before {
   content: "";
   position: absolute;
   display: block;
@@ -179,7 +179,7 @@ body {
   background: black;
   transform: rotate(-35deg);
 }
-.closer:after {
+.closer:after, .close-desktop-menu:after {
   content: "";
   display: block;
   width: 30px;
