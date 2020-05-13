@@ -28,10 +28,9 @@
           }
 
           var deviceWidth = getDeviceWidth();
-          var maxWidth = 1190;
+          var maxWidth = 900;
 
-          if (deviceWidth < maxWidth)
-          {
+
             // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины 
             // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в 
             // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
@@ -39,9 +38,7 @@
               document.write('<meta name="viewport" content="width=device-width">');
             else
               document.write('<meta name="viewport" content="width=device-height">');
-          }
-          else
-            document.write('<meta name="viewport" content="width=' + maxWidth + '">');
+
         }
       })();
     </script>
