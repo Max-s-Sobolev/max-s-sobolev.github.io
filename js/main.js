@@ -1,14 +1,24 @@
-headersImages = document.querySelectorAll("header .row:nth-child(1) .col img")
+
+const first_row = '<div class="col"><img src="img/header/1.jpg" alt=""></div><div class="col"><img src="img/header/2.jpg" alt=""></div><div class="col"><img src="img/header/3.jpg" alt=""></div>'
 
 
-for (img of headersImages){
-	if (window.matchMedia("(min-width: 768px)").matches) {
-	img.parentElement.style.background = `url(${img.src}) no-repeat`;
-	img.parentElement.style.backgroundSize = 'cover';
+if (window.matchMedia("(min-width: 1190px)").matches) {
+	document.querySelector("header .row:nth-child(1)").innerHTML = first_row;
+	headersImages = document.querySelectorAll("header .row:nth-child(1) .col img")
+
+	for (img of headersImages){
+		if (window.matchMedia("(min-width: 768px)").matches) {
+		img.parentElement.style.background = `url(${img.src}) no-repeat`;
+		img.parentElement.style.backgroundSize = 'cover';
+		}
+		img.remove()
+		
 	}
-	img.remove()
-	
+
 }
+
+
+
 
 
 /*------------MENU SETTINGS-----------*/
