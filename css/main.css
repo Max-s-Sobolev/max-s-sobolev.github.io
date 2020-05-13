@@ -128,13 +128,19 @@ body {
 /* OPEN AND CLOSE MENU */
 .burger {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 40px;
   z-index: 11;
   width: 30px;
   height: 3px;
   background: black;
+}
+@media (max-width: 480px) {
+  .burger {
+    top: 40px;
+    right: 20px;
+  }
 }
 .burger:before {
   content: "";
@@ -159,6 +165,12 @@ body {
   top: 40px;
   right: 40px;
   z-index: 11;
+}
+@media (max-width: 480px) {
+  .closer, .close-desktop-menu {
+    top: 40px;
+    right: 20px;
+  }
 }
 .closer:before, .close-desktop-menu:before {
   content: "";
@@ -187,7 +199,7 @@ menu {
     position: absolute;
     z-index: 10;
     width: 100vw;
-    left: -110vw;
+    left: -100vw;
   }
 }
 @media (min-width: 1190px) {
