@@ -209,8 +209,8 @@ menu {
   menu {
     position: fixed;
     z-index: 10;
-    width: 100vw;
-    left: -100vw;
+    width: 110vw;
+    left: -110vw;
   }
 }
 @media (min-width: 1190px) {
