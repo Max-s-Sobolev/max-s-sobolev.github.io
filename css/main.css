@@ -115,6 +115,7 @@ body {
   left: 0;
   transition: 0.5s;
   overflow-x: hidden;
+  height: 4000px;
 }
 
 .place {
@@ -196,13 +197,17 @@ body {
   transform: rotate(45deg);
 }
 
+.closer {
+  position: fixed;
+}
+
 /*------------------------*/
 menu {
   transition: 0.5s;
 }
 @media (max-width: 1189px) {
   menu {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     width: 100vw;
     left: -100vw;
