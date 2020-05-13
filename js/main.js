@@ -10,36 +10,46 @@ for (img of headersImages){
 	
 }
 
+
+/*------------MENU SETTINGS-----------*/
+const closeDesktopMenu = document.querySelector(".close-desktop-menu");
+//Если мы на мобилке, то убираем крестик на меню, чтобы он не выезжал
 if (!window.matchMedia("(min-width: 1190px)").matches) {
-	$(".close-desktop-menu").remove();
+	closeDesktopMenu.outerHTML = "";
 }
 
-const burger = $(".burger");
+const burger = document.querySelector(".burger");
+const menu = document.querySelector("menu");
 
-burger.click(() => {
-	
-	if (!(burger.hasClass('clicked'))){
-		burger.addClass('clicked');
+burger.addEventListener("click",() => {
+
 	if (window.matchMedia("(min-width: 1190px)").matches) {
-		burger.removeClass('clicked');
-		$('menu').animate({ left: '0px' }, 400); 
-		$('body').animate({ left: '285px' }, 400); 
-	} else {
-
-		$('menu').animate({ left: '0px' }, 200);
-		$('.burger').removeClass('burger').addClass("closer");
-		console.log($(".closer"))
-		
+		/*DESKTOP*/
+		menu.style.left =  '0px';
+		menu.style.left =  '450px';
 	}
-} else {
-	burger.removeClass('clicked');
-	$('menu').animate({ left: '-110vw' }, 200);
-	$('.closer').removeClass('closer').addClass("burger");
+	else{
 
-}
+		if (!burger.classList.contains('clicked')){
+		/*MOBILE*/
+			menu.style.left =  '0px';
+			burger.classList.remove('burger');
+			burger.classList.add('closer','clicked');
+		}
+		else{
+			menu.style.left =  '-110vw';
+			burger.classList.remove('closer', 'clicked');
+			burger.classList.add('burger');
+		}
+	}
+
 });
 
-$(".close-desktop-menu").click(() => {
-	$('menu').animate({ left: '-110vw' }, 200);
-	$('body').animate({ left: '0px' }, 200);
-})
+/*DESKTOP*/
+closeDesktopMenu.addEventListener("click", ()=>{
+		menu.style.left =  '-450px';
+		document.querySelector("body").style.left =  '0px';
+});
+
+
+/*------------MENU SETTINGS-----------*/
