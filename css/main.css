@@ -135,12 +135,6 @@ body {
   height: 3px;
   background: black;
 }
-@media (max-width: 480px) {
-  .burger {
-    top: 40px;
-    right: 20px;
-  }
-}
 .burger:before {
   content: "";
   position: absolute;
@@ -164,12 +158,6 @@ body {
   top: 40px;
   right: 40px;
   z-index: 11;
-}
-@media (max-width: 480px) {
-  .closer, .close-desktop-menu {
-    top: 40px;
-    right: 20px;
-  }
 }
 .closer:before, .close-desktop-menu:before {
   content: "";
