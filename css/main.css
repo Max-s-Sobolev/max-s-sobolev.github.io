@@ -113,6 +113,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
+  transition: 0.5s;
 }
 
 .place {
@@ -177,7 +178,7 @@ body {
   width: 30px;
   height: 3px;
   background: black;
-  transform: rotate(-35deg);
+  transform: rotate(-45deg);
 }
 .closer:after, .close-desktop-menu:after {
   content: "";
@@ -185,10 +186,13 @@ body {
   width: 30px;
   height: 3px;
   background: black;
-  transform: rotate(35deg);
+  transform: rotate(45deg);
 }
 
 /*------------------------*/
+menu {
+  transition: 0.5s;
+}
 @media (max-width: 1189px) {
   menu {
     position: absolute;
