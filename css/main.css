@@ -135,7 +135,7 @@ body {
   height: 3px;
   background: black;
 }
-@media (min-width: 1190px) {
+@media (min-width: 481px) {
   .burger {
     right: 40px;
   }
@@ -168,7 +168,7 @@ body {
   top: 40px;
   z-index: 11;
 }
-@media (min-width: 1190px) {
+@media (min-width: 481px) {
   .closer, .close-desktop-menu {
     right: 40px;
   }
