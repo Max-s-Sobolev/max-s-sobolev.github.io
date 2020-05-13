@@ -26,7 +26,7 @@ burger.addEventListener("click",() => {
 	if (window.matchMedia("(min-width: 1190px)").matches) {
 		/*DESKTOP*/
 		menu.style.left =  '0px';
-		menu.style.left =  '450px';
+		document.body.style.left =  '450px';
 	}
 	else{
 
