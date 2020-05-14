@@ -4,105 +4,185 @@
 	<meta charset="UTF-8">
 	<title>Main</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-<script type="text/javascript">
+<!-- header -->
+	<!-- Скрипт для корректного отображения на мобильных устройствах -->
+	<script type="text/javascript">
 
 
-      (function(){
-        // Выполняем код только на мобильных браузерах (на всякий случай)
-        if (typeof(window.orientation) !== 'undefined')
-        {
-          // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
-          function getDeviceWidth()
-          {
-            var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-            // iOS returns available pixels, Android returns pixels / pixel ratio
-            // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
-            if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-              deviceWidth = deviceWidth / window.devicePixelRatio;
+	      (function(){
+	        // Выполняем код только на мобильных браузерах (на всякий случай)
+	        if (typeof(window.orientation) !== 'undefined')
+	        {
+	          // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
+	          function getDeviceWidth()
+	          {
+	            var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+	            // iOS returns available pixels, Android returns pixels / pixel ratio
+	            // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
+	            if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+	              deviceWidth = deviceWidth / window.devicePixelRatio;
 
-            return deviceWidth;
-          }
+	            return deviceWidth;
+	          }
 
-          var deviceWidth = getDeviceWidth();
-          var maxWidth = 900;
+	          var deviceWidth = getDeviceWidth();
+	          var maxWidth = 900;
 
 
-            // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины 
-            // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в 
-            // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
-            if (window.orientation == 0 || window.orientation == 180)
-              document.write('<meta name="viewport" content="width=device-width">');
-            else
-              document.write('<meta name="viewport" content="width=device-height">');
+	            // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины 
+	            // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в 
+	            // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
+	            if (window.orientation == 0 || window.orientation == 180)
+	              document.write('<meta name="viewport" content="width=device-width">');
+	            else
+	              document.write('<meta name="viewport" content="width=device-height">');
 
-        }
-      })();
-    </script>
+	        }
+	      })();</script>
 
-<div class="burger">
-	<div class="place"></div>
-</div>
-<menu>
-	<div class="close-desktop-menu"><div class="place"></div></div>
-	<div class="menu">
-		<ul>
-			<li><a href="#">Контакты</a></li>
-			<li><a href="#">Приобрести фото</a></li>
-			<li><a href="#">Backstage</a></li>
-			<li><a href="#">Полное портфолио</a></li>
-		</ul>
+	<div class="burger">
+		<div class="place"></div>
 	</div>
-	
-</menu>
 
-<header>
-	<div class="container-fluid">
-
-		<div class="row no-gutters">
-			
+	<menu>
+		<div class="close-desktop-menu"><div class="place"></div></div>
+		<div class="menu">
+			<ul>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Приобрести фото</a></li>
+				<li><a href="#">Backstage</a></li>
+				<li><a href="#">Полное портфолио</a></li>
+			</ul>
 		</div>
-		
-		<div class="row no-gutters">
-			<div class="col">
-				<div class="title">
-					<div>Professional</div>
-					<div>Photographer</div>
-				</div>
+
+	</menu>
+
+	<header>
+		<div class="container-fluid">
+
+			<div class="row no-gutters">
 				
 			</div>
-			<div class="col">
-				<!-- Avatar -->
-				<div class="avatar-wrapper">
-					<div class="avatar">
-						<div class="avatar-inner WeqH">
-							<div class="avatar-content">
-							<img src="img/header/avatar.jpg" alt="">
+			
+			<div class="row no-gutters">
+				<div class="col">
+					<div class="title">
+						<div>Professional</div>
+						<div>Photographer</div>
+					</div>
+					
+				</div>
+				<div class="col">
+					<!-- Avatar -->
+					<div class="avatar-wrapper">
+						<div class="avatar">
+							<div class="avatar-inner WeqH">
+								<div class="avatar-content">
+								<img src="img/header/avatar.jpg" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
+					<!--/Avatar -->
 				</div>
-				<!--/Avatar -->
-			</div>
-			<div class="col">
-				<div>KULIKOV</div>
-				<div>MAXIM</div>
+				<div class="col">
+					<div>KULIKOV</div>
+					<div>MAXIM</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</header>
+	</header>
+
+<!-- /header -->
+
+
+<!-- slider  -->
+	<section>
+		<div class="title">портреты</div>
+		<div class="slider-wrap">
+			
+			  <div class="slider-for">
+			    <div><img data-lazy="img/sliders/portrets/01.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			
+			<div class="slider-nav-wrapper">
+			  <div class="slider-nav">
+			    <div><img data-lazy="img/sliders/portrets/01.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			</div>
+
+		</div>
+	</section>
+<!-- /slider -->
 
 
 
 
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="slick/slick/slick.min.js"></script>
 
-
-
-
-<!--<script src="js/jquery-3.5.1.min.js"></script>-->
 <script src="js/main.js"></script>
+
+
+  <script type="text/javascript">
+$(document).ready(function(){
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    lazyLoad: 'ondemand',
+    swipeToSlide: true,
+    touchMove: true,
+    mobileFirst: true,
+    responsive: [
+	    {
+	      breakpoint: 1190,
+	      settings: {
+	        asNavFor: '.slider-nav',
+	        swipeToSlide: false,
+	        arrows: false
+	      }
+	    }
+    ]
+    
+  });
+  
+	  $('.slider-nav').slick({
+	    slidesToShow: 5,
+	    slidesToScroll: 1,
+	    asNavFor: '.slider-for',
+	    dots: false,
+	    centerMode: true,
+	    focusOnSelect: true,
+	    variableWidth: true,
+	    lazyLoad: 'ondemand'
+	  });
+  
+});
+
+
+  </script>
+
 </body>
 </html>
