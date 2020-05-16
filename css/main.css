@@ -180,30 +180,82 @@ section .slider-for div img {
 }
 
 /* Arrows */
-.slick-prev {
-  top: 35px;
-  left: -100px;
+@media (max-width: 1189px) {
+  .slick-prev {
+    top: 50%;
+    left: 0px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 45px;
+    padding: 11px;
+  }
+  .slick-prev:before {
+    content: "";
+    display: block;
+    opacity: 1;
+    background: url("../img/sliders/default/mobile-left-arrow.svg") no-repeat;
+    background-size: 100%;
+    height: 45px;
+    width: 23px;
+    transition: 0.3s;
+  }
+  .slick-prev:hover, .slick-prev:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
-.slick-prev:before {
-  content: "";
-  display: block;
-  background: url("../img/sliders/default/left-arrow-active.png");
-  height: 45px;
-  width: 23px;
-  transition: 0.3s;
+@media (min-width: 1190px) {
+  .slick-prev {
+    top: 35px;
+    left: -100px;
+  }
+  .slick-prev:before {
+    content: "";
+    display: block;
+    background: url("../img/sliders/default/left-arrow-active.png");
+    height: 45px;
+    width: 23px;
+    transition: 0.3s;
+  }
 }
 
-.slick-next {
-  top: 35px;
-  right: -100px;
+@media (max-width: 1189px) {
+  .slick-next {
+    top: 50%;
+    right: 0px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 45px;
+    padding: 11px;
+  }
+  .slick-next:before {
+    content: "";
+    display: block;
+    opacity: 1;
+    background: url("../img/sliders/default/mobile-right-arrow.svg") no-repeat;
+    background-size: 100%;
+    height: 45px;
+    width: 23px;
+    transition: 0.3s;
+  }
+  .slick-next:hover, .slick-next:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
-.slick-next:before {
-  content: "";
-  background: url("../img/sliders/default/right-arrow-active.png");
-  display: block;
-  height: 45px;
-  width: 23px;
-  transition: 0.3s;
+@media (min-width: 1190px) {
+  .slick-next {
+    top: 35px;
+    right: -100px;
+  }
+  .slick-next:before {
+    content: "";
+    background: url("../img/sliders/default/right-arrow-active.png");
+    display: block;
+    height: 45px;
+    width: 23px;
+    transition: 0.3s;
+  }
 }
 
 .place {
