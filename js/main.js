@@ -60,15 +60,15 @@ closeDesktopMenu.addEventListener("click", ()=>{
 });
 
 
-/*------------MENU SETTINGS-----------*/
+/*------------/MENU SETTINGS-----------*/
 
 
 
 /* SLIDER height equal width */
 $(function(){
-  $('.slider-wrap').height($('.slider-wrap').width()/2);
+  $('.slider-wrap').height($('.slider-wrap').width()/1.8);
 
   $(window).resize(function(){
-    $('.slider-wrap').height($('.slider-wrap').width()/2);
+    $('.slider-wrap').height($('.slider-wrap').width()/1.8);
   });
 });
