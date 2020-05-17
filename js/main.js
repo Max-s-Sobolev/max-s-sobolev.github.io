@@ -62,13 +62,28 @@ closeDesktopMenu.addEventListener("click", ()=>{
 
 /*------------/MENU SETTINGS-----------*/
 
-
+console.log($(window).width())
 
 /* SLIDER height equal width */
 $(function(){
   $('.slider-wrap').height($('.slider-wrap').width()/1.8);
 
+	if ($(window).width() < 1189) {
+  		$('section[view-more] .camera').width($(window).width()/4);
+  	} else {
+  		$('section[view-more] .camera').width($(window).width()/6);
+  	}
+
   $(window).resize(function(){
     $('.slider-wrap').height($('.slider-wrap').width()/1.8);
+    if ($(window).width() < 1189) {
+  		$('section[view-more] .camera').width($(window).width()/4);
+  	} else {
+  		$('section[view-more] .camera').width($(window).width()/6);
+  	}
+
   });
-});
+
+ });
+
+
