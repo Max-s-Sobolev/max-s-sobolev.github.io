@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
-
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   border: 0;
@@ -96,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px;
@@ -130,6 +132,7 @@ section {
 
 /*SLIDER*/
 section[slider] {
+  overflow-x: hidden;
   /*Название*/
   /*обертка на навигацию*/
   /*навигация*/
