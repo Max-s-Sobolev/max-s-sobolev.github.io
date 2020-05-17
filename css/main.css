@@ -453,6 +453,7 @@ header .container-fluid .row:nth-child(2) {
 @media (max-width: 1189px) {
   header .container-fluid .row:nth-child(2) {
     margin-bottom: 50px;
+    transform: scale(0.9);
   }
 }
 header .container-fluid .row:nth-child(2) .col {
