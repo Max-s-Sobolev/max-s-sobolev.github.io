@@ -637,6 +637,14 @@ section[view-more] .text-wrap {
     margin-left: 100px;
   }
 }
+@media (max-width: 321px) {
+  section[view-more] .text-wrap {
+    font-size: 5vw;
+  }
+}
+section[view-more] .text-wrap .text {
+  cursor: pointer;
+}
 section[view-more] .text-wrap .underline {
   margin: 10px 0;
   width: 100%;
@@ -651,5 +659,386 @@ section[view-more] .text-wrap .underline {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/*contacts*/
+@media (min-width: 1190px) {
+  section[contacts] {
+    margin-bottom: 60px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section[contacts] .container-fluid {
+    padding: 0;
+  }
+  section[contacts] .social__title {
+    width: 474px;
+    height: 209px;
+    background: url("../img/social_title.png");
+  }
+  section[contacts] .social__links {
+    margin-top: -50px;
+  }
+  section[contacts] .social__links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  section[contacts] .social__links tr:first-child td {
+    padding-bottom: 20px;
+  }
+  section[contacts] .social__links td {
+    text-align: center;
+    padding-right: 20px;
+  }
+  section[contacts] .social__links td:nth-child(2) {
+    padding-right: 0;
+  }
+  section[contacts] .for-mobile-only {
+    display: none;
+  }
+  section[contacts] .contact-form {
+    width: 800px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+    font-family: "Monitorica";
+    font-size: 34px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section[contacts] .contact-form .title {
+    width: 465px;
+    height: 195px;
+    background: url("../img/form1.png");
+  }
+  section[contacts] .contact-form .list {
+    width: 75%;
+  }
+  section[contacts] .contact-form .list ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  section[contacts] .contact-form .list ul li {
+    color: white;
+    list-style: none;
+    position: relative;
+  }
+  section[contacts] .contact-form .list ul li:before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/tick.svg");
+  }
+  section[contacts] .contact-form form {
+    width: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section[contacts] .contact-form form input {
+    width: 640px;
+    margin-bottom: 12px;
+    text-align: center;
+    color: white;
+    background: transparent;
+    border: 1px solid #fff;
+  }
+  section[contacts] .contact-form form input:nth-child(2) {
+    margin-bottom: 0;
+  }
+  section[contacts] .contact-form form input::placeholder {
+    opacity: 1;
+    color: #fff !important;
+  }
+  section[contacts] .contact-form form [type=submit] {
+    width: 30%;
+    height: 56px;
+    margin: 25px 0;
+    transition: 0.5s;
+  }
+  section[contacts] .contact-form form [type=submit]:hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] {
+    background: black;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  section[contacts] .social {
+    order: 1;
+    /*Костыль, чтобы выставить иконки в ряд*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section[contacts] .social__links-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  section[contacts] .social tbody {
+    display: flex;
+  }
+  section[contacts] .social tbody tr {
+    display: flex;
+    align-content: center;
+  }
+  section[contacts] .social tbody tr:first-child td:first-child {
+    /*INST*/
+  }
+  section[contacts] .social tbody tr:first-child td:first-child svg * {
+    fill: white;
+  }
+  section[contacts] .social tbody tr:first-child td:nth-child(2) {
+    /*VK*/
+  }
+  section[contacts] .social tbody tr:first-child td:nth-child(2) svg path {
+    fill: white;
+  }
+  section[contacts] .social tbody tr:first-child td:nth-child(2) svg rect {
+    fill: transparent;
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:first-child {
+    /*WHATSAPP*/
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:first-child svg:nth-child(1) > g:nth-child(1) > path:nth-child(1) {
+    fill: white;
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:first-child svg:nth-child(1) > g:nth-child(1) > path:nth-child(2) {
+    fill: black;
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:nth-child(2) {
+    /*VK*/
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:nth-child(2) svg:nth-child(1) > g:nth-child(1) > path:nth-child(1) {
+    fill: white;
+  }
+  section[contacts] .social tbody tr:nth-child(2) td:nth-child(2) svg:nth-child(1) > g:nth-child(1) > path:nth-child(2) {
+    fill: black;
+  }
+  section[contacts] .social tbody td {
+    /*ВСЕ ИКОНКИ*/
+    transform: scale(0.7);
+  }
+  section[contacts] .social__title {
+    align-self: center;
+    width: 374px;
+    height: 173px;
+    background: url("../img/mobile-contact.png");
+  }
+}
+@media (max-width: 1189px) and (max-width: 380px) {
+  section[contacts] .social__title {
+    transform: scale(0.7);
+    margin-top: -30px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 380px) {
+  section[contacts] .social__links {
+    transform: scale(0.9);
+    margin: -30px 0 0 0;
+  }
+}
+@media (max-width: 1189px) and (max-width: 320px) {
+  section[contacts] .social__links {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .for-mobile-only {
+    order: 2;
+    position: relative;
+    display: block;
+    color: white;
+    margin: 40px auto 0px auto;
+    font-family: "Monitorica";
+    font-size: 34px;
+  }
+  section[contacts] .for-mobile-only:before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    background: white;
+    top: 50%;
+    left: -85px;
+  }
+  section[contacts] .for-mobile-only:after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    background: white;
+    top: 50%;
+    left: 59px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 380px) {
+  section[contacts] .for-mobile-only {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form {
+    order: 3;
+    width: 100%;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+    font-family: "Monitorica";
+    font-size: 34px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section[contacts] .contact-form .title {
+    align-self: center;
+    width: 374px;
+    height: 173px;
+    background: url("../img/mobile-contact2.png");
+  }
+}
+@media (max-width: 1189px) and (max-width: 380px) {
+  section[contacts] .contact-form .title {
+    transform: scale(0.7);
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form .list {
+    width: 75%;
+  }
+}
+@media (max-width: 1189px) and (max-width: 320px) {
+  section[contacts] .contact-form .list {
+    margin-top: -30px;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form .list ul {
+    display: flex;
+    justify-content: center;
+  }
+  section[contacts] .contact-form .list ul li {
+    color: white;
+    list-style: none;
+    position: relative;
+  }
+  section[contacts] .contact-form .list ul li:first-child {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 456px) {
+  section[contacts] .contact-form .list ul li:first-child {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 378px) {
+  section[contacts] .contact-form .list ul li:first-child {
+    margin-right: 35px;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form .list ul li:before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/tick.svg");
+  }
+}
+@media (max-width: 1189px) and (max-width: 597px) {
+  section[contacts] .contact-form .list ul li:before {
+    transform: scale(0.8);
+    top: 0;
+  }
+}
+@media (max-width: 1189px) and (max-width: 455px) {
+  section[contacts] .contact-form .list ul li:before {
+    transform: scale(0.7);
+    left: -32px;
+    top: -2px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 378px) {
+  section[contacts] .contact-form .list ul li:before {
+    transform: scale(0.55);
+    top: -5px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 643px) {
+  section[contacts] .contact-form .list ul li {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form form {
+    width: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1189px) and (max-width: 320px) {
+  section[contacts] .contact-form form {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1189px) and (max-width: 643px) {
+  section[contacts] .contact-form form {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form form input {
+    width: 100%;
+    max-width: 640px;
+    margin-bottom: 12px;
+    text-align: center;
+    color: white;
+    min-height: 40px;
+    background: transparent;
+    border: 1px solid #fff;
+  }
+  section[contacts] .contact-form form input:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form form input::placeholder {
+    opacity: 1;
+    color: #fff !important;
+  }
+}
+@media (max-width: 1189px) {
+  section[contacts] .contact-form form [type=submit] {
+    height: 56px;
+    margin: 25px 0;
+    transition: 0.5s;
+    padding: 0 5px;
+  }
+  section[contacts] .contact-form form [type=submit]:hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}
+@media (max-width: 1189px) and (max-width: 480px) {
+  section[contacts] .contact-form form [type=submit] {
+    height: 40px;
+    width: 30%;
   }
 }
