@@ -87,3 +87,20 @@ $(function(){
  });
 
 
+
+
+
+
+
+
+/*<div class="social">
+						<div class="social__title social__title-wrapper">
+							<div class="social__title-text">Связаться со мной</div>
+						</div>
+						<div class="social__links social__links-wrapper">
+							<div class="social__links_instagram"><!--INSTAGRAM--></div>
+							<div class="social__links_whatsapp"><!-- WHATSAPP--></div>
+							<div class="social__links_vk"><!--    VK   --></div>
+							<div class="social__links_telegram"><!-- TELEGRAM--></div>
+						</div>
+					</div> */
