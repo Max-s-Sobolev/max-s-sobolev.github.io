@@ -98,6 +98,102 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+/*Иконка сообщения*/
+.message {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  bottom: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+.message:before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 55px;
+  background: black;
+  position: absolute;
+  left: -6px;
+  top: -5px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+  animation: pulse 3s infinite;
+  cursor: pointer;
+}
+
+.message__showed_links {
+  display: none;
+  position: fixed;
+  width: 62px;
+  height: 300px;
+  background: white;
+  right: 15px;
+  bottom: 20px;
+  z-index: 99999999999;
+  border-radius: 20px 20px 30px 30px;
+  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.8);
+}
+.message__showed_links .links {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+.message__showed_links .links img {
+  width: 100%;
+  display: block;
+}
+.message__showed_links .close_message {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 20%;
+  cursor: pointer;
+}
+.message__showed_links .close_message:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 25px;
+  left: 10px;
+  width: 30px;
+  height: 3px;
+  background: black;
+  transform: rotate(-45deg);
+}
+.message__showed_links .close_message:after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+  transform: rotate(45deg);
+}
+
+.show {
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px;
@@ -113,6 +209,7 @@ html {
   /* Firefox */
 }
 
+/*Чтобы меню выскальзывало*/
 body {
   position: relative;
   top: 0;
@@ -121,6 +218,7 @@ body {
   overflow-x: hidden;
 }
 
+/*Общий отступ по бокам*/
 section {
   padding: 0 100px;
 }
@@ -171,40 +269,40 @@ section[slider] .slider-nav-wrapper {
 }
 @media (max-width: 1189px) {
   section[slider] .slider-nav-wrapper {
-    /*MOBILE* не показываем навигацию на мобильных устройствах*/
+    /*MOBILE* не показываем навигацию слайдера на мобильных устройствах*/
     display: none;
   }
 }
-section[slider] .slider-nav {
+section[slider] .slider-nav, section[slider] .slider-nav2, section[slider] .slider-nav3 {
   width: 85%;
   /* Текущий слайд в навигации */
 }
-section[slider] .slider-nav div {
+section[slider] .slider-nav div, section[slider] .slider-nav2 div, section[slider] .slider-nav3 div {
   height: 90px;
 }
-section[slider] .slider-nav div img {
+section[slider] .slider-nav div img, section[slider] .slider-nav2 div img, section[slider] .slider-nav3 div img {
   margin-right: 20px;
   width: 210px;
   height: 90px;
   object-fit: cover;
 }
-section[slider] .slider-nav [class~=slick-current] img {
+section[slider] .slider-nav [class~=slick-current] img, section[slider] .slider-nav2 [class~=slick-current] img, section[slider] .slider-nav3 [class~=slick-current] img {
   border: 1px solid #3E3E3E;
 }
-section[slider] .slider-for {
+section[slider] .slider-for, section[slider] .slider-for2, section[slider] .slider-for3 {
   height: 80%;
   margin-bottom: 20px;
 }
-section[slider] .slider-for div {
+section[slider] .slider-for div, section[slider] .slider-for2 div, section[slider] .slider-for3 div {
   height: 100%;
 }
-section[slider] .slider-for div img {
+section[slider] .slider-for div img, section[slider] .slider-for2 div img, section[slider] .slider-for3 div img {
   width: inherit;
   height: inherit;
   object-fit: cover;
 }
 
-/* Arrows */
+/* Arrows слайдера*/
 @media (max-width: 1189px) {
   .slick-prev {
     top: 50%;
@@ -303,7 +401,7 @@ section[slider] .slider-for div img {
 }
 @media (min-width: 481px) {
   .burger {
-    right: 40px;
+    right: 35px;
   }
 }
 @media (max-width: 480px) {
@@ -317,7 +415,7 @@ section[slider] .slider-for div img {
   top: -6px;
   width: 30px;
   height: 3px;
-  background: black;
+  background: inherit;
 }
 .burger:after {
   content: "";
@@ -325,9 +423,20 @@ section[slider] .slider-for div img {
   top: 6px;
   width: 30px;
   height: 3px;
-  background: black;
+  background: inherit;
 }
 
+@keyframes burgerpulse {
+  0% {
+    background: black;
+  }
+  70% {
+    background: white;
+  }
+  100% {
+    background: black;
+  }
+}
 .closer, .close-desktop-menu {
   cursor: pointer;
   position: absolute;
@@ -411,6 +520,7 @@ menu .menu ul li a:hover {
   padding-left: 5px;
 }
 
+/*Хедер*/
 header .container-fluid {
   padding: 0;
 }
@@ -421,7 +531,7 @@ header .container-fluid {
   }
 }
 header .container-fluid .row:nth-child(1) .col {
-  height: 530px;
+  height: 610px;
   position: relative;
 }
 header .container-fluid .row:nth-child(1) .col:nth-child(1):after {
@@ -429,7 +539,7 @@ header .container-fluid .row:nth-child(1) .col:nth-child(1):after {
   position: absolute;
   z-index: 1;
   right: -4px;
-  height: 212px;
+  height: 244px;
   width: 8px;
   background: black;
 }
@@ -438,7 +548,7 @@ header .container-fluid .row:nth-child(1) .col:nth-child(2):after {
   position: absolute;
   z-index: 1;
   right: -4px;
-  height: 424px;
+  height: 488px;
   width: 8px;
   background: black;
 }
@@ -536,20 +646,9 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     left: 50%;
   }
 }
-header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar .avatar-inner {
-  position: relative;
-  height: 0;
-  border: none;
-}
-header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar .avatar-inner .avatar-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .avatar img {
   width: 100%;
+  object-fit: cover;
 }
 @media (max-width: 1190px) {
   header .container-fluid .row:nth-child(2) {
@@ -573,6 +672,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
     margin: 20px 0 0 0;
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(1) .title div:last-child {
+    /*PROFESSIONAL*/
     width: 400px;
     line-height: 50px;
     font-size: 30px;
@@ -583,6 +683,7 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
   }
   header .container-fluid .row:nth-child(2) .col:nth-child(3) {
     order: 3;
+    /*MAXIM KULIKOV*/
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -595,10 +696,6 @@ header .container-fluid .row:nth-child(2) .col:nth-child(2) .avatar-wrapper > .a
   header .container-fluid .row:nth-child(2) .col:nth-child(3) div:last-child {
     padding-left: 5px;
   }
-}
-
-.WeqH {
-  padding-top: 100%;
 }
 
 /*VIEW MORE*/
@@ -663,6 +760,7 @@ section[view-more] .text-wrap .underline {
 }
 /*contacts*/
 @media (min-width: 1190px) {
+  /*DESKTOP*/
   section[contacts] {
     margin-bottom: 60px;
     padding: 0;
@@ -674,6 +772,7 @@ section[view-more] .text-wrap .underline {
     padding: 0;
   }
   section[contacts] .social__title {
+    /*Связаться со мной*/
     width: 474px;
     height: 209px;
     background: url("../img/social_title.png");
@@ -698,6 +797,7 @@ section[view-more] .text-wrap .underline {
     padding-right: 0;
   }
   section[contacts] .for-mobile-only {
+    /*ИЛИ*/
     display: none;
   }
   section[contacts] .contact-form {
@@ -711,6 +811,7 @@ section[view-more] .text-wrap .underline {
     align-items: center;
   }
   section[contacts] .contact-form .title {
+    /*Оставить заявку*/
     width: 465px;
     height: 195px;
     background: url("../img/form1.png");
@@ -728,6 +829,7 @@ section[view-more] .text-wrap .underline {
     position: relative;
   }
   section[contacts] .contact-form .list ul li:before {
+    /*Галочки*/
     content: "";
     position: absolute;
     left: -40px;
@@ -759,6 +861,7 @@ section[view-more] .text-wrap .underline {
     color: #fff !important;
   }
   section[contacts] .contact-form form [type=submit] {
+    /*Кнопка отправить*/
     width: 30%;
     height: 56px;
     margin: 25px 0;
@@ -771,6 +874,7 @@ section[view-more] .text-wrap .underline {
   }
 }
 @media (max-width: 1189px) {
+  /*Mobile*/
   section[contacts] {
     background: black;
     padding: 0;
@@ -833,6 +937,7 @@ section[view-more] .text-wrap .underline {
     transform: scale(0.7);
   }
   section[contacts] .social__title {
+    /*Связаться со мной*/
     align-self: center;
     width: 374px;
     height: 173px;
@@ -859,6 +964,7 @@ section[view-more] .text-wrap .underline {
 @media (max-width: 1189px) {
   section[contacts] .for-mobile-only {
     order: 2;
+    /*ИЛИ*/
     position: relative;
     display: block;
     color: white;
