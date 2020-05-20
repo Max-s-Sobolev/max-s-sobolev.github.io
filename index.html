@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Main</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/main.css">
@@ -32,7 +33,7 @@
 	          }
 
 	          var deviceWidth = getDeviceWidth();
-	          var maxWidth = 900;
+	          
 
 
 	            // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины 
@@ -50,11 +51,23 @@
 		<div class="place"></div>
 	</div>
 
+	<div class="message show">
+		<img src="img/message 1.png">
+	</div>
+	<div class="message__showed_links">
+		<div class="links">
+			<a href="#"><img src="img/instagram.svg" alt=""></a>
+			<a href="#"><img src="img/telegram.svg" alt=""></a>
+			<a href="#"><img src="img/vk.svg" alt=""></a>
+			<a href="#"><img src="img/whatsapp.svg" alt=""></a>
+		</div>
+		<div class="close_message"></div>
+	</div>
 	<menu>
 		<div class="close-desktop-menu"><div class="place"></div></div>
 		<div class="menu">
 			<ul>
-				<li><a href="#">Контакты</a></li>
+				<li><a href="#contacts">Контакты</a></li>
 				<li><a href="#">Приобрести фото</a></li>
 				<li><a href="#">Backstage</a></li>
 				<li><a href="#">Полное портфолио</a></li>
@@ -82,11 +95,7 @@
 					<!-- Avatar -->
 					<div class="avatar-wrapper">
 						<div class="avatar">
-							<div class="avatar-inner WeqH">
-								<div class="avatar-content">
 								<img src="img/header/avatar.jpg" alt="">
-								</div>
-							</div>
 						</div>
 					</div>
 					<!--/Avatar -->
@@ -105,11 +114,11 @@
 <!-- slider  -->
 
 	<section slider>
-		<div class="title-wrap"><div class="title-text">портреты</div></div>
+		<div class="title-wrap wow fadeIn" data-wow-duration="2s" ><div class="title-text">портреты</div></div>
 		<div class="slider-wrap">
 			
-			  <div class="slider-for">
-			    <div><img data-lazy="img/sliders/portrets/01.jpg">  </img></div>
+			  <div class="slider-for wow fadeIn" data-wow-duration="2s">
+			    <div><img data-lazy="img/sliders/portrets/001.jpg">  </img></div>
 			    <div><img data-lazy="img/sliders/portrets/02.jpg">  </img></div>
 			    <div><img data-lazy="img/sliders/portrets/03.jpg">  </img></div>
 			    <div><img data-lazy="img/sliders/portrets/04.jpg">  </img></div>
@@ -121,7 +130,7 @@
 			
 			<div class="slider-nav-wrapper">
 			  <div class="slider-nav">
-			    <div><img data-lazy="img/sliders/portrets/01.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/001.jpg"> </img></div>
 			    <div><img data-lazy="img/sliders/portrets/02.jpg"> </img></div>
 			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
 			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
@@ -137,8 +146,77 @@
 <!-- /slider -->
 
 
+<!-- slider  -->
+
+	<section slider>
+		<div class="title-wrap wow fadeIn" data-wow-duration="2s" ><div class="title-text">природа</div></div>
+		<div class="slider-wrap">
+			
+			  <div class="slider-for2 wow fadeIn" data-wow-duration="2s">
+			    <div><img data-lazy="img/sliders/portrets/007.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			
+			<div class="slider-nav-wrapper">
+			  <div class="slider-nav2">
+			    <div><img data-lazy="img/sliders/portrets/007.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			</div>
+
+		</div>
+	</section>
+<!-- /slider -->
+
+
+<!-- slider  -->
+
+	<section slider>
+		<div class="title-wrap wow fadeIn" data-wow-duration="2s" ><div class="title-text">город</div></div>
+		<div class="slider-wrap">
+			
+			  <div class="slider-for3 wow fadeIn" data-wow-duration="2s">
+			    <div><img data-lazy="img/sliders/portrets/01.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg">  </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			
+			<div class="slider-nav-wrapper">
+			  <div class="slider-nav3">
+			    <div><img data-lazy="img/sliders/portrets/01.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/02.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/03.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/04.jpg"> </img></div>
+			    <div><img data-lazy="img/sliders/portrets/05.jpg"> </img></div>
+			  </div>
+			</div>
+
+		</div>
+	</section>
+<!-- /slider -->
+
 <!-- Veiw more-->
-	<section view-more>
+	<section view-more class="wow fadeIn">
 		<div class="wrapper">
 			<div class="camera"><img src="img/camera.svg" alt=""></div>
 			<div class="text-wrap">
@@ -151,6 +229,7 @@
 
 
 <!-- Contact us-->
+	<a name="contacts"></a>
 	<section contacts>
 
 		<div class="contact-form">
@@ -168,7 +247,7 @@
 			</form>
 		</div>
 	
-<div class="for-mobile-only">ИЛИ</div>
+		<div class="for-mobile-only">ИЛИ</div>
 
 		
 		<div class="social">
@@ -291,7 +370,83 @@ $(document).ready(function(){
   
 });
 
+$(document).ready(function(){
+  $('.slider-for2').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    lazyLoad: 'ondemand',
+    swipeToSlide: true,
+    touchMove: true,
+    mobileFirst: true,
+    responsive: [
+	    {
+	      breakpoint: 1190,
+	      settings: {
+	        asNavFor: '.slider-nav2',
+	        swipeToSlide: false,
+	        arrows: false
+	      }
+	    }
+    ]
+    
+  });
+  
+	  $('.slider-nav2').slick({
+	    slidesToShow: 5,
+	    slidesToScroll: 1,
+	    asNavFor: '.slider-for2',
+	    dots: false,
+	    centerMode: true,
+	    focusOnSelect: true,
+	    variableWidth: true,
+	    lazyLoad: 'ondemand'
+	  });
+  
+});
 
+$(document).ready(function(){
+  $('.slider-for3').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    lazyLoad: 'ondemand',
+    swipeToSlide: true,
+    touchMove: true,
+    mobileFirst: true,
+    responsive: [
+	    {
+	      breakpoint: 1190,
+	      settings: {
+	        asNavFor: '.slider-nav3',
+	        swipeToSlide: false,
+	        arrows: false
+	      }
+	    }
+    ]
+    
+  });
+  
+	  $('.slider-nav3').slick({
+	    slidesToShow: 5,
+	    slidesToScroll: 1,
+	    asNavFor: '.slider-for3',
+	    dots: false,
+	    centerMode: true,
+	    focusOnSelect: true,
+	    variableWidth: true,
+	    lazyLoad: 'ondemand'
+	  });
+  
+});
+
+
+  </script>
+  <script src="js/wow.min.js"></script>
+  <script>
+  	new WOW().init();
   </script>
 
 </body>
