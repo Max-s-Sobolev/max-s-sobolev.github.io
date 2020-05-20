@@ -1136,11 +1136,6 @@ section[view-more] .text-wrap .underline {
     transition: 0.5s;
     padding: 0 5px;
   }
-  section[contacts] .contact-form form [type=submit]:hover {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-  }
 }
 @media (max-width: 1189px) and (max-width: 480px) {
   section[contacts] .contact-form form [type=submit] {
