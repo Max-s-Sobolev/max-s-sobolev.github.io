@@ -446,7 +446,9 @@ $(document).ready(function(){
   </script>
   <script src="js/wow.min.js"></script>
   <script>
-  	new WOW().init();
+  	if ($(window).width() > 1189) {
+  		new WOW().init();
+  	}
   </script>
 
 </body>
