@@ -67,6 +67,8 @@ console.log($(window).width())
 /* SLIDER height equal width */
 $(function(){
   $('.slider-wrap').height($('.slider-wrap').width()/1.8);
+  $('.avatar').height($('.avatar').width());
+  $('.avatar img').height($('.avatar img').width());
 
 	if ($(window).width() < 1189) {
   		$('section[view-more] .camera').width($(window).width()/4);
@@ -75,6 +77,8 @@ $(function(){
   	}
 
   $(window).resize(function(){
+  	$('.avatar').height($('.avatar').width());
+  	$('.avatar img').height($('.avatar img').width());
     $('.slider-wrap').height($('.slider-wrap').width()/1.8);
     if ($(window).width() < 1189) {
   		$('section[view-more] .camera').width($(window).width()/4);
@@ -87,11 +91,26 @@ $(function(){
  });
 
 
+$(".message").click(()=>{
+	$(".message img").animate({'opacity': 0}, 'fast');
+	$(".message").animate({'opacity': 0}, 'fast');
+	$(".message__showed_links").delay(400).toggle('show');
+});
+
+$(".close_message").click(()=>{
+
+	$(".message__showed_links").toggle('show');
+	$(".message img").delay(500).animate({'opacity': 1}, 'fast');
+	$(".message").delay(500).animate({'opacity': 1}, 'fast');
+});
 
 
 
-
-
+$("section[view-more] .camera").click(()=>{
+	
+	$("section[view-more] .camera img").animate({ opacity: 0.4 }, 500, function () { document.querySelector("section[view-more] .camera img").src = 'img/lens2FOCUS.svg'; });
+    $("section[view-more] .camera img").animate({ opacity: 1 }, 500);
+});
 
 /*<div class="social">
 						<div class="social__title social__title-wrapper">
